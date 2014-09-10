@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ $# -ne 1 ] 
+then
+    echo "Error: missing argument."
+    echo "Usage: $0 <username>"
+    exit 1
+fi
+
+./buildout/bin/buildout -c buildout_$1.cfg
+sudo apache2ctl graceful
+
+date
