@@ -6,11 +6,11 @@ CRDPPF Portal
   
 Checkout the source code:
 
-    $ git clone https://github.com/sitn/crdppf.git
+    $ git clone https://github.com/SIT-Jura/crdppf.git
 
 or when you're using ssh key (see https://help.github.com/articles/generating-ssh-keys):
 
-    $ git clone git@github.com:sitn/crdppf.git
+    $ git clone git@github.com:SIT-Jura/crdppf.git
 
 Bootstrap and buildout
 
@@ -18,7 +18,7 @@ Bootstrap and buildout
         http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/ --setup-source \
         http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/distribute_setup.py
 
-Get the submodule crdppf_core (https://github.com/sitn/crdppf_core.git if you'd like to get the core project too)
+Get the submodule crdppf_core (https://github.com/SIT-Jura/crdppf_core.git if you'd like to get the core project too)
 
     $ git submodule update --init
     
@@ -78,7 +78,7 @@ if you are updating the inital install to the generalized version you probably g
 
     $ rm -r crdppf
 
-Get the submodule crdppf_core (https://github.com/sitn/crdppf_core.git if you'd like to get the core project too)
+Get the submodule crdppf_core (https://github.com/SIT-Jura/crdppf_core.git if you'd like to get the core project too)
 
     $ git submodule update --init
     

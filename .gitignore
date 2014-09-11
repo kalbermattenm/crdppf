@@ -3,12 +3,6 @@
 *CRDPPF.pdf
 *.egg-info/
 apache/*.conf
-buildout_olivier.cfg
-buildout_nesitnd1.cfg
-buildout_michael.cfg
-buildout_francois.cfg
-buildout_nesitn2.cfg
-buildout_nesitn2_prepub.cfg
 config_db.yaml
 config_pdf.yaml
 development.ini
