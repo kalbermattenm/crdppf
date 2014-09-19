@@ -117,86 +117,147 @@ END
 ######################
 
 LAYER
-  NAME "r73_contenus_ponctuels"
-  TYPE POINT
-   METADATA
-       "ows_title"                    "r73_contenus_ponctuels"
-       "wms_srs"                     "epsg:21781"
-       "wms_title"                   "${vars:instanceid} WMS Server"
-       "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
-       "wms_srs"                    "EPSG:21781" 
-  END
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-  PROCESSING "CLOSE_CONNECTION=DEFER"
-  DATA "geom from crdppf.r73_contenus_ponctuels using unique idobj using srid=21781"
-  STATUS ON
-  CLASSITEM "codegenre" 
-  OPACITY 60
-  TEMPLATE "ttt"
-  CLASS
-    NAME "Bloc erratique"
-    EXPRESSION /8101/
-    SYMBOL "square"
-    COLOR 155 0 0
-    SIZE 5
-  END
-  CLASS
-    NAME "Arbre isolé"
-    EXPRESSION /8102/
-    SYMBOL "circle"
-    COLOR 0 180 0
-    SIZE 8
-  END
-  CLASS
-    NAME "Bâtiment intéressant"
-    EXPRESSION /8201/
-    SYMBOL "patrimoine_architectural"
-    MINSIZE 10
-    SIZE 10
-    MAXSIZE 10
-    COLOR 255 115 66
-    OUTLINECOLOR 132 0 0
-  END
-  CLASS
-    NAME "Bâtiment typique ou pittoresque"
-    EXPRESSION /8202/
-    SYMBOL "patrimoine_architectural"
-    MINSIZE 10
-    SIZE 10
-    MAXSIZE 10
-    COLOR 0 200 0
-    OUTLINECOLOR 132 0 0
-  END
-  CLASS
-    NAME "Bâtiment intéressant"
-    EXPRESSION /8201/
-    SYMBOL "patrimoine_architectural"
-    MINSIZE 10
-    SIZE 10
-    MAXSIZE 10
-    COLOR 255 115 66
-    OUTLINECOLOR 132 0 0
-  END
-  CLASS
-    NAME "Bâtiment perturbant"
-    EXPRESSION /8203/
-    SYMBOL "patrimoine_architectural"
-    MINSIZE 10
-    SIZE 10
-    MAXSIZE 10
-    COLOR 180 0 0
-    OUTLINECOLOR 132 0 0
-  END
-  CLASS
-    NAME "Autre"
-    EXPRESSION /8901/
-    SYMBOL "circle"
-    COLOR 155 0 0
-    SIZE 5
-  END
-  TOLERANCE 8
-  TOLERANCEUNITS pixels
+    NAME "r73_contenus_ponctuels"
+    TYPE POINT
+    METADATA
+        "ows_title"                    "r73_contenus_ponctuels"
+        "wms_srs"                     "epsg:21781"
+        "wms_title"                   "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.crdppf_r73_contenus_ponctuels using unique idobj using srid=21781"
+    STATUS ON
+    CLASSITEM "teneur" 
+    OPACITY 60
+    TEMPLATE "ttt"
+    CLASS
+        NAME "Bâtiment inscrit au RBC"
+        EXPRESSION "Bâtiment inscrit au RBC"
+        STYLE
+            SYMBOL "carre"
+            SIZE 16
+            WIDTH 3
+            COLOR 255 0 0
+        END
+    END
+    CLASS
+        NAME "Bâtiment protégé"
+        EXPRESSION "Bâtiment protégé"
+        STYLE
+            SYMBOL "carre_croix"
+            SIZE 16
+            WIDTH 3
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Grenier"
+        EXPRESSION "Grenier"
+        STYLE
+            SYMBOL "losange"
+            SIZE 16
+            WIDTH 3
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Fontaine"
+        EXPRESSION "Fontaine"
+        STYLE
+            SYMBOL "triangle_vide"
+            SIZE 16
+            WIDTH 3
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Croix"
+        EXPRESSION "Croix"
+        STYLE
+            SYMBOL "croix_chretienne"
+            SIZE 8
+            WIDTH 3
+            COLOR 255 0 0
+        END
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 8
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Borne"
+        EXPRESSION "Borne"
+        STYLE
+            SYMBOL "carre"
+            SIZE 14
+            WIDTH 3
+            COLOR 255 0 0
+        END
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 3
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Objet local"
+        EXPRESSION "Objet local"
+        STYLE
+            SYMBOL "etoile_vide"
+            SIZE 18
+            WIDTH 3
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Site d'exploitation du fer"
+        EXPRESSION "Site exploitation du fer"
+        STYLE
+            SYMBOL "etoile"
+            SIZE 18
+            COLOR 255 0 0
+        END
+    END  
+    CLASS
+        NAME "Site archéologique"
+        EXPRESSION "Site archéologique"
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 16
+            COLOR 255 0 0 
+        END
+    END  
+    CLASS
+        NAME "Arbre"
+        EXPRESSION "Arbre"
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 9
+            COLOR 168 255 0
+            OUTLINECOLOR 168 255 0
+        END
+    END
+    CLASS
+        NAME "Grotte"
+        EXPRESSION "Grotte"
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 16
+            COLOR 255 0 0
+        END
+        STYLE
+            SYMBOL "etoile"
+            SIZE 15
+            COLOR 255 255 255
+        END
+    END    
+    TOLERANCE 8
+    TOLERANCEUNITS pixels
 END
 
 LAYER

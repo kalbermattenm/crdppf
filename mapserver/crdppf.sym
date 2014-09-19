@@ -410,3 +410,255 @@ SYMBOL
     TYPE PIXMAP
     IMAGE "images\IcePack_gray.png"
 END
+
+##SITJ
+SYMBOL
+    NAME "hatchsymbol"
+    TYPE hatch
+END
+
+SYMBOL
+    NAME "trame_0-230-0_1"
+    TYPE PIXMAP
+    IMAGE "images/trame_0-230-0_1.gif"
+END
+
+SYMBOL
+    NAME "trame_0-214-255_1"
+    TYPE PIXMAP
+    IMAGE "images/trame_0-214-255_1.gif"
+END
+
+SYMBOL
+	Name 'cercle_plein'
+	Type ELLIPSE
+	Filled true
+	Points
+    	10 10
+	END
+END
+
+SYMBOL
+    NAME 'cercle_vide'
+    TYPE ELLIPSE
+    Filled false
+    POINTS
+        10 10
+    END
+END
+
+Symbol
+    Name 'triangle_vide'
+    Type VECTOR
+    Points
+        0 1
+        0.5 0
+        1 1
+        0 1
+    END
+END
+
+SYMBOL
+    NAME "triangle"
+    TYPE vector
+    POINTS
+        0 4 
+        2 0 
+        4 4 
+        0 4 
+    END
+    FILLED TRUE
+END
+
+SYMBOL
+    NAME "triangle_2"
+    TYPE vector
+    POINTS
+        0 0 
+        0 4 
+        -4 2 
+        0 0 
+    END
+    FILLED TRUE
+END
+
+SYMBOL
+    NAME "triangle_3"
+    TYPE vector
+    POINTS
+        0 0 
+        0 4 
+        -6 2 
+        0 0 
+    END
+    FILLED TRUE
+END
+
+SYMBOL
+    NAME "triangle_4"
+    TYPE vector
+    POINTS
+        0 0 
+        0 4 
+        4 2 
+        0 0 
+    END
+    FILLED TRUE
+END
+
+SYMBOL
+    NAME "carre"
+    TYPE VECTOR
+    FILLED false
+    POINTS
+        0 0
+        0 1
+        1 1
+        1 0 
+        0 0
+    END
+END
+
+SYMBOL
+    NAME "carre_plein"
+    TYPE VECTOR
+    FILLED true
+    POINTS
+        0 0
+        0 1
+        1 1
+        1 0 
+        0 0
+    END
+END
+
+SYMBOL
+    NAME "carre_croix"
+    TYPE VECTOR
+    FILLED false
+    POINTS
+        0 0
+        0 1
+        1 1
+        1 0 
+        0 0
+        -99 -99
+        0 1
+        1 0
+        -99 -99
+        0 0
+        1 1
+    END
+END
+
+SYMBOL
+    NAME "losange"
+    TYPE VECTOR
+    FILLED false
+    POINTS
+        0.5 0
+        1 0.5
+        0.50 1
+        0 0.5
+        0.5 0
+    END
+END
+
+SYMBOL
+    NAME "losange_plein"
+    TYPE VECTOR
+    FILLED true
+    POINTS
+        0.5 0
+        1 0.5
+        0.50 1
+        0 0.5
+        0.5 0
+    END
+END
+
+SYMBOL
+    NAME "etoile_vide"
+    TYPE VECTOR
+    POINTS
+        0 0.375
+        0.35 0.375
+        0.5 0
+        0.65 0.375
+        1 0.375
+        0.75 0.625
+        0.875 1
+        0.5 0.75
+        0.125 1
+        0.25 0.625
+        0 0.375 
+    END
+END
+
+SYMBOL
+    NAME "etoile"
+    TYPE VECTOR
+    FILLED TRUE
+    POINTS
+        0 0.375
+        0.35 0.375
+        0.5 0
+        0.65 0.375
+        1 0.375
+        0.75 0.625
+        0.875 1
+        0.5 0.75
+        0.125 1
+        0.25 0.625
+        0 0.375 
+    END
+END
+
+SYMBOL
+  NAME "croix_chretienne"
+  TYPE VECTOR
+#  FILLED TRUE
+    POINTS
+        1 0
+        1 -3
+        -99 -99
+        0 -2
+        2 -2
+#      0 1
+#      3 1
+#      -99 -99
+#      2 0
+#      2 2
+    END
+END
+
+SYMBOL
+    NAME "croix"
+    TYPE VECTOR
+    POINTS
+        0 1
+        2 1
+        -99 -99
+        1 0
+        1 2
+    END
+END
+
+SYMBOL
+    NAME "croix2"
+    TYPE VECTOR
+#    FILLED TRUE
+    POINTS
+        0 1
+        1 0
+        -99 -99
+        0 0
+        1 1
+    END
+END
+
+SYMBOL
+    NAME "ligne_noir"
+    TYPE PIXMAP
+    IMAGE "images/ligne_noir.gif"
+END
