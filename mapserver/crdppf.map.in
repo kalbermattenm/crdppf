@@ -131,7 +131,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_contenus_ponctuels using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_contenus_ponctuels using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 60
@@ -275,7 +275,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_contenus_lineaires using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_contenus_lineaires using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 60
@@ -344,7 +344,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_autres_perimetres_superposes using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 90
@@ -519,7 +519,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_autres_perimetres_superposes using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
     TRANSPARENCY 65
     CLASSITEM "teneur"
 #    MINSCALEDENOM 7500
@@ -579,7 +579,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_zones_superposees using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_zones_superposees using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 90
@@ -648,7 +648,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r73_affectations_primaires using unique idobj using srid=21781"
+    DATA "geom from crdppf.r73_affectations_primaires using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 50
@@ -974,7 +974,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r116_sites_pollues using unique idobj using srid=21781"
+    DATA "geom from crdppf.r116_sites_pollues using unique idobj using srid=21781"
     TYPE POLYGON
     CLASSITEM "type_site"
     TEMPLATE "ttt"
@@ -1040,7 +1040,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r131_zones_protection_eaux_souterraines using unique idobj using srid=21781"
+    DATA "geom from crdppf.r131_zone_prot_eau using unique idobj using srid=21781"
     TYPE POLYGON
     TEMPLATE "ttt"
     OPACITY 60
@@ -1084,7 +1084,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r132_perimetres_protection_eaux_souterraines using unique idobj using srid=21781"
+    DATA "geom from crdppf.r132_perimetre_prot_eau using unique idobj using srid=21781"
     TYPE POLYGON
     TEMPLATE "ttt"
     OPACITY 60
@@ -1119,7 +1119,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r145_degres_sensibilite_bruit using unique idobj using srid=21781"
+    DATA "geom from crdppf.r145_sens_bruit using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
     OPACITY 50
@@ -1179,7 +1179,7 @@ LAYER
     CONNECTIONTYPE POSTGIS
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.crdppf_r157_limite_forestiere_constatee using unique idobj using srid=21781"
+    DATA "geom from crdppf.r157_lim_foret using unique idobj using srid=21781"
     STATUS ON
     TEMPLATE "ttt"
     CLASSITEM "teneur"
@@ -1199,29 +1199,29 @@ END
 #####################
 
 
-###LAYER
-###  NAME "la3_limites_communales"
-###  TYPE POLYGON
-###  CONNECTIONTYPE POSTGIS
-###  CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-###  PROCESSING "CLOSE_CONNECTION=DEFER"
-###  DATA "geom from general.la3_limites_communales using unique numcom using srid=21781"
-###  STATUS ON
-###  CLASS
-###    NAME "Limites communales"
-###    STYLE
-###      OUTLINECOLOR 90 90 90
-###    END 
-###  END
-###  METADATA
-###    "ows_title" "la3_limites_communales"
-###    "wms_srs" "epsg:21781"
-###  END
-###  PROJECTION
-###    "init=epsg:21781"   ##required
-###  END
-###END
-###
+LAYER
+    NAME "la3_limites_communales"
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from general.la3_limites_communales using unique numcom using srid=21781"
+    STATUS ON
+    CLASS
+        NAME "Limites communales"
+        STYLE
+            OUTLINECOLOR 90 90 90
+        END 
+    END
+    METADATA
+        "ows_title" "la3_limites_communales"
+        "wms_srs" "epsg:21781"
+    END
+    PROJECTION
+        "init=epsg:21781"   ##required
+    END
+END
+
 ########################
 #### Mensuration
 ########################
