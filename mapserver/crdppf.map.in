@@ -105,7 +105,7 @@ LAYER
         "wfs_enable_request" "*"
         "gml_types" "auto"
 #        "gml_include_items" "idemai,cadastre,nummai,typimm,srfmai,source,url_terris"
-        "gml_include_items" "commune,localite,numero,surftotal"
+        "gml_include_items" "commune,localite,numero,surftotal,idemai"
     END
     PROJECTION
         "init=epsg:21781"   ##required
@@ -331,8 +331,9 @@ LAYER
 END
 
 LAYER
-    NAME "crdppf_r73_autres_perimetres_superposes_polygon"
-    GROUP "r73_perimetres_superposes"  
+    NAME "r73_perimetres_superposes"
+#    NAME "crdppf_r73_autres_perimetres_superposes_polygon"
+#    GROUP "r73_perimetres_superposes"  
     TYPE LINE
     METADATA
         "ows_title"                  "r73_perimetres_superposes"
@@ -499,72 +500,72 @@ LAYER
     END
 END
 
-LAYER
-    NAME "crdppf_r73_autres_perimetres_superposes_Ligne"
-    GROUP "r73_perimetres_superposes"
-    TYPE line
-    STATUS ON
-    METADATA
-        "ows_title" "crdppf_r73_autres_perimetres_superposes"
-        "wms_srs" "epsg:21781"
-        "gml_include_items" "all"
-        "gml_types" "auto"
-        #"wfs_enable_request" "*"
-        "gml_geometries" "geom"
-        "gml_geom_type" "line"
-    END
-    PROJECTION
-        "init=epsg:21781"
-    END
-    CONNECTIONTYPE POSTGIS
-    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-    PROCESSING "CLOSE_CONNECTION=DEFER"
-    DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
-    TRANSPARENCY 65
-    CLASSITEM "teneur"
-#    MINSCALEDENOM 7500
-    MAXSCALEDENOM 25000
-    CLASS
-        NAME "Périmètre de protection archéologique"
-        EXPRESSION "Périmètre de protection archéologique"
-        STYLE
-            SYMBOL "cercle_plein"
-            SIZE 10
-            COLOR 255 0 0
-            GAP 10
-        END
-    END
-    CLASS
-        NAME "Périmètre de danger naturel"
-        EXPRESSION "Périmètre de danger naturel"
-        STYLE
-            COLOR 255 0 0
-            WIDTH 1
-        END
-        STYLE
-            SYMBOL "triangle_2"
-            SIZE 10
-            COLOR 255 0 0
-            ANGLE 90
-            GAP -20
-        END
-    END
-    CLASS
-        NAME "Doline"
-        EXPRESSION "Doline"
-        STYLE
-            COLOR 0 0 0
-            WIDTH 1
-        END
-        STYLE
-            SYMBOL "triangle_2"
-            SIZE 10
-            COLOR 0 0 0
-            ANGLE 90
-            GAP -20
-        END
-    END
-END
+##LAYER
+##    NAME "crdppf_r73_autres_perimetres_superposes_Ligne"
+##    GROUP "r73_perimetres_superposes"
+##    TYPE line
+##    STATUS ON
+##    METADATA
+##        "ows_title" "crdppf_r73_autres_perimetres_superposes"
+##        "wms_srs" "epsg:21781"
+##        "gml_include_items" "all"
+##        "gml_types" "auto"
+##        #"wfs_enable_request" "*"
+##        "gml_geometries" "geom"
+##        "gml_geom_type" "line"
+##    END
+##    PROJECTION
+##        "init=epsg:21781"
+##    END
+##    CONNECTIONTYPE POSTGIS
+##    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+##    PROCESSING "CLOSE_CONNECTION=DEFER"
+##    DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
+##    TRANSPARENCY 65
+##    CLASSITEM "teneur"
+###    MINSCALEDENOM 7500
+##    MAXSCALEDENOM 25000
+##    CLASS
+##        NAME "Périmètre de protection archéologique"
+##        EXPRESSION "Périmètre de protection archéologique"
+##        STYLE
+##            SYMBOL "cercle_plein"
+##            SIZE 10
+##            COLOR 255 0 0
+##            GAP 10
+##        END
+##    END
+##    CLASS
+##        NAME "Périmètre de danger naturel"
+##        EXPRESSION "Périmètre de danger naturel"
+##        STYLE
+##            COLOR 255 0 0
+##            WIDTH 1
+##        END
+##        STYLE
+##            SYMBOL "triangle_2"
+##            SIZE 10
+##            COLOR 255 0 0
+##            ANGLE 90
+##            GAP -20
+##        END
+##    END
+##    CLASS
+##        NAME "Doline"
+##        EXPRESSION "Doline"
+##        STYLE
+##            COLOR 0 0 0
+##            WIDTH 1
+##        END
+##        STYLE
+##            SYMBOL "triangle_2"
+##            SIZE 10
+##            COLOR 0 0 0
+##            ANGLE 90
+##            GAP -20
+##        END
+##    END
+##END
 
 LAYER
     NAME "r73_zones_superposees"
@@ -2732,7 +2733,45 @@ END
 ###  MINSCALEDENOM 50
 ###  MAXSCALEDENOM 7500
 ###END
+
 ###
+LAYER
+    NAME "cadastre_bienfond"
+    TYPE POLYGON
+    STATUS ON
+    METADATA
+        "ows_title" "cadastre_bienfond"
+        "wms_srs" "epsg:21781"
+        "gml_include_items" "all"
+        "gml_types" "auto"
+        "wfs_enable_request" "*"
+        "gml_geometries" "geom"
+        "gml_geom_type" "polygon"
+        "gml_featureid" "nolocalite_noparcelle"
+    END
+    PROJECTION
+        "init=epsg:21781"
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=www-data password=www-data dbname=donnees host=localhost port=5432"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from cadastre.cad_bien_fonds using unique objectid using srid=21781"
+    TRANSPARENCY 80
+    TEMPLATE "ttt"
+#   LABELITEM 'numero'
+#   LABELMAXSCALE 5500
+    CLASS
+        NAME "Biens-fonds"
+        STYLE
+            WIDTH 2
+            OUTLINECOLOR 0 0 0
+        END
+    END
+    MINSCALEDENOM 50
+    MAXSCALEDENOM 5990
+END
+
+
 END
 
 

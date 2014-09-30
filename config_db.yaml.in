@@ -20,16 +20,16 @@ db_config:
       att_federal_number: nufeco
     # table containing the properties
     property:
-      tablename: immeubles_canton
-      schema: public
+      tablename: cad_bien_fonds
+      schema: crdppf
       att_id: noobj
       att_id_property: idemai
       att_property_number: nummai
       att_property_type: typimm
       att_property_source: source
     #optional:
-    local_names:
-      tablename: nom_local_lieu_dit
-      schema: public
-      att_id: idcnlo
-      att_local_name: nomloc
+#    local_names:
+#      tablename: nom_local_lieu_dit
+#      schema: public
+#      att_id: idcnlo
+#      att_local_name: nomloc
