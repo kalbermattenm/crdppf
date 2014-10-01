@@ -87,7 +87,7 @@ SYMBOL
 END
 
 SYMBOL
-    Name "hachure1" # \\\
+    Name "hachure1" # ///
     TRANSPARENT 0
     Type VECTOR
     Points
@@ -402,13 +402,13 @@ END
 SYMBOL
     NAME "IcePack"
     TYPE PIXMAP
-    IMAGE "images\IcePack.png"
+    IMAGE "images/IcePack.png"
 END
 
 SYMBOL
     NAME "IcePack_gray"
     TYPE PIXMAP
-    IMAGE "images\IcePack_gray.png"
+    IMAGE "images/IcePack_gray.png"
 END
 
 ##SITJ

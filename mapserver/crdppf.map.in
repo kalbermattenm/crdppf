@@ -332,9 +332,7 @@ END
 
 LAYER
     NAME "r73_perimetres_superposes"
-#    NAME "crdppf_r73_autres_perimetres_superposes_polygon"
-#    GROUP "r73_perimetres_superposes"  
-    TYPE LINE
+    TYPE POLYGON
     METADATA
         "ows_title"                  "r73_perimetres_superposes"
         "wms_srs"                   "epsg:21781"
@@ -375,11 +373,15 @@ LAYER
             OUTLINECOLOR 255 0 0
         END
     END
-    CLASS
+    CLASS                       
         NAME "Périmètre de protection des vergers"
         EXPRESSION "Périmètre de protection des vergers"
         STYLE
-            SYMBOL 'trame_0-230-0_1'
+            COLOR 0 230 0
+            SYMBOL "hatchsymbol"
+            SIZE 10
+            WIDTH 2
+            ANGLE 90
         END
         STYLE
             OUTLINECOLOR 0 230 0
@@ -491,81 +493,19 @@ LAYER
         NAME "Marais, zone humide"
         EXPRESSION "Marais, zone humide"
         STYLE
-            SYMBOL 'trame_0-214-255_1'
+            COLOR 0 214 255
+            SYMBOL "hatchsymbol"
+            SIZE 8
+            WIDTH 2
+            ANGLE 90
         END
         STYLE
             OUTLINECOLOR 0 214 255
             WIDTH 1
         END
+
     END
 END
-
-##LAYER
-##    NAME "crdppf_r73_autres_perimetres_superposes_Ligne"
-##    GROUP "r73_perimetres_superposes"
-##    TYPE line
-##    STATUS ON
-##    METADATA
-##        "ows_title" "crdppf_r73_autres_perimetres_superposes"
-##        "wms_srs" "epsg:21781"
-##        "gml_include_items" "all"
-##        "gml_types" "auto"
-##        #"wfs_enable_request" "*"
-##        "gml_geometries" "geom"
-##        "gml_geom_type" "line"
-##    END
-##    PROJECTION
-##        "init=epsg:21781"
-##    END
-##    CONNECTIONTYPE POSTGIS
-##    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-##    PROCESSING "CLOSE_CONNECTION=DEFER"
-##    DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
-##    TRANSPARENCY 65
-##    CLASSITEM "teneur"
-###    MINSCALEDENOM 7500
-##    MAXSCALEDENOM 25000
-##    CLASS
-##        NAME "Périmètre de protection archéologique"
-##        EXPRESSION "Périmètre de protection archéologique"
-##        STYLE
-##            SYMBOL "cercle_plein"
-##            SIZE 10
-##            COLOR 255 0 0
-##            GAP 10
-##        END
-##    END
-##    CLASS
-##        NAME "Périmètre de danger naturel"
-##        EXPRESSION "Périmètre de danger naturel"
-##        STYLE
-##            COLOR 255 0 0
-##            WIDTH 1
-##        END
-##        STYLE
-##            SYMBOL "triangle_2"
-##            SIZE 10
-##            COLOR 255 0 0
-##            ANGLE 90
-##            GAP -20
-##        END
-##    END
-##    CLASS
-##        NAME "Doline"
-##        EXPRESSION "Doline"
-##        STYLE
-##            COLOR 0 0 0
-##            WIDTH 1
-##        END
-##        STYLE
-##            SYMBOL "triangle_2"
-##            SIZE 10
-##            COLOR 0 0 0
-##            ANGLE 90
-##            GAP -20
-##        END
-##    END
-##END
 
 LAYER
     NAME "r73_zones_superposees"
