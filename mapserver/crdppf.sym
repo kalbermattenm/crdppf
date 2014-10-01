@@ -418,18 +418,6 @@ SYMBOL
 END
 
 SYMBOL
-    NAME "trame_0-230-0_1"
-    TYPE PIXMAP
-    IMAGE "images/trame_0-230-0_1.gif"
-END
-
-SYMBOL
-    NAME "trame_0-214-255_1"
-    TYPE PIXMAP
-    IMAGE "images/trame_0-214-255_1.gif"
-END
-
-SYMBOL
 	Name 'cercle_plein'
 	Type ELLIPSE
 	Filled true
