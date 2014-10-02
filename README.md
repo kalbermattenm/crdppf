@@ -109,8 +109,11 @@ crdppf/crdppf_core/crdppf/util/pdf_classes.py
     $ self.image(self.appconfig.imagesbasedir+self.pdfconfig.cantonlogopath, 110, 8, 44.0, 9.5)
 
 crdppf/crdppf_core/crdppf/util/table2model_match.py
+    
     Remplacer 
+    
     from crdppf.models import RoadNoise, ForestLimits, ForestDistances
+    
     Par
     
     $ from crdppf.models import RoadNoise, ForestLimits
