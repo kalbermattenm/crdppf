@@ -67,6 +67,7 @@ crdppf/crdppf_core/crdppf/static/js/Crdppf/main.js
     $ center: new OpenLayers.LonLat(583000, 243000),
     
 crdppf/crdppf_core/crdppf/static/js/Crdppf/map.js
+
     $ resolutions: [350,140,70,26.5,14,7,3.5,2.65,1.75,1.3,0.7,0.35,0.2,0.1,0.05],
     $ 
     $ maxExtent: new OpenLayers.Bounds(420000.0, 30000.0, 900000.0, 350000.0),
@@ -86,27 +87,38 @@ crdppf/crdppf_core/crdppf/static/js/Crdppf/map.js
     $             maximized: true,
     $ 
          
-crdppf/crdppf_core/crdppf/templates/derived/globals.js        
+crdppf/crdppf_core/crdppf/templates/derived/globals.js 
+       
     $ 'plan_cadastral_name': 'plan_cadastral${request.tile_date[0]}'
 
 crdppf/crdppf_core/crdppf/util/pdf_classes.py
     Lignes 113 et 247, remplacer \Placeholder.jpg par
+    
     $ /Placeholder.jpg
+    
     Ligne 83
+    
     $ self.cantonlogopath = 'ecussons/JUcompactrvb.jpg’
+    
     Ligne 109
+    
     $ self.image(self.appconfig.imagesbasedir+self.pdfconfig.cantonlogopath, 110, 8, 44.0, 9.5)
+    
     Ligne 243
+    
     $ self.image(self.appconfig.imagesbasedir+self.pdfconfig.cantonlogopath, 110, 8, 44.0, 9.5)
 
 crdppf/crdppf_core/crdppf/util/table2model_match.py
     Remplacer 
     from crdppf.models import RoadNoise, ForestLimits, ForestDistances
     Par
+    
     $ from crdppf.models import RoadNoise, ForestLimits
 
     Suppression de la ligne
+    
     $ 'r159_dist_foret': ForestDistances , ForestDistances
+    
     Ne pas oublier d’enlever la , sur la ligne précédente
 
 # Upgrade existing project
