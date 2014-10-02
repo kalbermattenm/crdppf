@@ -31,6 +31,11 @@ maybe a
 
     $ git submodule foreach git submodule update --init
 
+After the installation put the directoriy crdpp in W
+
+    $ cd ..
+    $ chmod -R o+w crdppf
+
 does also the trick
 Create your own buildout file by:
 * Copy-paste `buildout.cfg`
