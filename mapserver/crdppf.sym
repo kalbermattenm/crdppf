@@ -650,3 +650,45 @@ SYMBOL
     TYPE PIXMAP
     IMAGE "images/ligne_noir.gif"
 END
+
+SYMBOL
+    NAME "pt_limite_croix"
+    TYPE PIXMAP
+    IMAGE "images/pt_limite_croix.gif"
+END
+
+SYMBOL
+    NAME "OD_Arbre"
+    TYPE PIXMAP
+    IMAGE "images/OD_Arbre.gif"
+END
+
+SYMBOL
+    NAME "OD_Grotte"
+    TYPE PIXMAP
+    IMAGE "images/OD_Grotte.gif"
+END
+
+SYMBOL
+    NAME "OD_Mat_Antenne"
+    TYPE PIXMAP
+    IMAGE "images/OD_Mat-Antenne.gif"
+END
+
+SYMBOL
+    NAME "OD_Monument"
+    TYPE PIXMAP
+    IMAGE "images/OD_Monument.gif"
+END
+
+SYMBOL
+    NAME "OD_Source"
+    TYPE PIXMAP
+    IMAGE "images/OD_Source.gif"
+END
+
+SYMBOL
+    NAME "OD_Statue_crucifix"
+    TYPE PIXMAP
+    IMAGE "images/OD_Statue-crucifix.gif"
+END
