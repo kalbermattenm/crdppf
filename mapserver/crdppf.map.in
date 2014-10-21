@@ -105,7 +105,8 @@ LAYER
         "wfs_enable_request" "*"
         "gml_types" "auto"
 #        "gml_include_items" "idemai,cadastre,nummai,typimm,srfmai,source,url_terris"
-        "gml_include_items" "commune,localite,numero,surftotal,idemai"
+#        "gml_include_items" "commune,localite,numero,surftotal,idemai,nummai"
+        "gml_include_items" "all"
     END
     PROJECTION
         "init=epsg:21781"   ##required
@@ -1534,7 +1535,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 5990
+    MAXSCALEDENOM 10500
 END
 
 LAYER
@@ -1615,7 +1616,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 5990
+    MAXSCALEDENOM 10500
 END
 
 LAYER
@@ -1655,7 +1656,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 5990
+    MAXSCALEDENOM 10500
 END
 
 #########################################
@@ -1785,7 +1786,7 @@ LAYER
     DATA "geom from cadastre.cad_pos_immeuble using unique objectid using srid=21781"
     LABELITEM 'numero'
     LABELMINSCALE 3650
-    LABELMAXSCALE 5500
+    LABELMAXSCALE 10500
     CLASS
         LABEL
             TYPE TRUETYPE
@@ -1798,7 +1799,7 @@ LAYER
         END        
     END
     MINSCALEDENOM 3650
-    MAXSCALEDENOM 5500
+    MAXSCALEDENOM 10500
 END
 
 #########################################
