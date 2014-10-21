@@ -692,3 +692,15 @@ SYMBOL
     TYPE PIXMAP
     IMAGE "images/OD_Statue-crucifix.gif"
 END
+
+SYMBOL
+    NAME "trame_verte"
+    TYPE PIXMAP
+    IMAGE "images/trame_verte.gif"
+END
+
+SYMBOL
+    NAME "trame_bleu"
+    TYPE PIXMAP
+    IMAGE "images/trame_bleu.gif"
+END

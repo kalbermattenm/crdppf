@@ -389,11 +389,7 @@ LAYER
         NAME "Périmètre de protection des vergers"
         EXPRESSION "Périmètre de protection des vergers"
         STYLE
-            COLOR 0 230 0
-            SYMBOL "hatchsymbol"
-            SIZE 10
-            WIDTH 2
-            ANGLE 90
+            SYMBOL "trame_verte"
         END
         STYLE
             OUTLINECOLOR 0 230 0
@@ -569,11 +565,11 @@ LAYER
         NAME "Marais, zone humide"
         EXPRESSION "Marais, zone humide"
         STYLE
-            COLOR 0 214 255
-            SYMBOL "hatchsymbol"
-            SIZE 8
-            WIDTH 2
-            ANGLE 90
+##            COLOR 0 214 255
+            SYMBOL "trame_bleu"
+##            SIZE 8
+##            WIDTH 2
+##            ANGLE 90
         END
         STYLE
             OUTLINECOLOR 0 214 255
