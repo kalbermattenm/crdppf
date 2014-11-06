@@ -10,7 +10,7 @@ FONTSET fonts.txt
 
 #CONFIG "MS_ERRORFILE" "/tmp/ms.log"
 DEBUG 3
-EXTENT 496748.9216 183451.7632 598251.0784 226548.2368
+EXTENT 544000 217400 615400 264800
 
 WEB
   IMAGEPATH "/tmp"
@@ -261,6 +261,7 @@ LAYER
     END    
     TOLERANCE 8
     TOLERANCEUNITS pixels
+    MAXSCALEDENOM 25000
 END
 
 LAYER
@@ -329,6 +330,7 @@ LAYER
             GAP 10
         END
     END
+    MAXSCALEDENOM 25000
 END
 
 LAYER
@@ -724,7 +726,7 @@ LAYER
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_affectations_primaires using unique idobj using srid=21781"
     STATUS ON
-    CLASSITEM "teneur" 
+    CLASSITEM "trie" 
     OPACITY 50
     TEMPLATE "ttt"
     LABELITEM 'abreviation'
@@ -1535,7 +1537,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 10500
+    MAXSCALEDENOM 15500
 END
 
 LAYER
@@ -1616,7 +1618,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 10500
+    MAXSCALEDENOM 15500
 END
 
 LAYER
@@ -1656,7 +1658,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 10500
+    MAXSCALEDENOM 15500
 END
 
 #########################################
@@ -1799,7 +1801,7 @@ LAYER
         END        
     END
     MINSCALEDENOM 3650
-    MAXSCALEDENOM 10500
+    MAXSCALEDENOM 15500
 END
 
 #########################################
