@@ -10,7 +10,7 @@ FONTSET fonts.txt
 
 #CONFIG "MS_ERRORFILE" "/tmp/ms.log"
 DEBUG 3
-EXTENT 544000 217400 615400 264800
+EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
 
 WEB
   IMAGEPATH "/tmp"

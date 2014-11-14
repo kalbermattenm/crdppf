@@ -1,3 +1,6 @@
+wmts_openlayers:
+ mapproxyurl: ['http://mapfishtile0.jura.ch/main/tiles', 'http://mapfishtile1.jura.ch/main/tiles', 'http://mapfishtile2.jura.ch/main/tiles', 'http://mapfishtile3.jura.ch/main/tiles', 'http://mapfishtile4.jura.ch/main/tiles', 'http://mapfishtile5.jura.ch/main/tiles']
+
 app_config:  
  # lang: ${vars:default_language}
  # defaultfontfamily: Arial
