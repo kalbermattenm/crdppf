@@ -61,35 +61,10 @@ Run buildout
 
 # Change in crdppf_core (not in variable)
 Changement a effectuer dans crdppf_core en attendant que cela passe en variable dans le projet NE
-
-crdppf/crdppf_core/crdppf/static/js/Crdppf/main.js
-
-    $ center: new OpenLayers.LonLat(583000, 243000),
-    
-crdppf/crdppf_core/crdppf/static/js/Crdppf/map.js
-
-    $ resolutions: [350,140,70,26.5,14,7,3.5,2.65,1.75,1.3,0.7,0.35,0.2,0.1,0.05],
-    $ 
-    $ maxExtent: new OpenLayers.Bounds(420000.0, 30000.0, 900000.0, 350000.0),
-    $ 
-    $ restrictedExtent: new OpenLayers.Bounds , et y metre les coord JU (530000,200000,630000,285000)
-    $ 
-    $     var overviewMap = new OpenLayers.Control.OverviewMap({
-    $             layers: [
-    $                 new OpenLayers.Layer.Image(
-    $                     "overview",
-    $                     Crdppf.staticImagesDir + 'overviewmap.png',
-    $                     new OpenLayers.Bounds(554000, 220000, 610000, 262000),
-    $                     new OpenLayers.Size(147, 110)
-    $                 )
-    $             ],
-    $             size: new OpenLayers.Size(147, 110),
-    $             maximized: true,
-    $ 
          
 crdppf/crdppf_core/crdppf/templates/derived/globals.js 
        
-    $ 'plan_cadastral_name': 'plan_cadastral${request.tile_date[0]}'
+    $ 'plan_cadastral_name': 'plan_cadastral_crdppf${request.tile_date[0]}'
 
 crdppf/crdppf_core/crdppf/util/pdf_classes.py
     Lignes 113 et 247, remplacer \Placeholder.jpg par
