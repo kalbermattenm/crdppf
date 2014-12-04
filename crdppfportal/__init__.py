@@ -11,6 +11,7 @@ import papyrus
 import os
 import yaml
 
+
 def read_tile_date(request):
     """
     Read the tile date from tile date file. Return "c2c", "c2c"
@@ -22,26 +23,20 @@ def read_tile_date(request):
     if os.path.exists(tile_date_file):
         tile_date = yaml.load(file(tile_date_file))
         return tile_date['plan_cadastral'], tile_date['plan_ville']
-    return '', ''
-
+    return 'c2c', 'c2c'
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     my_session_factory = UnencryptedCookieSessionFactoryConfig('itsaseekreet',2400)
     config = Configurator(settings=settings, session_factory = my_session_factory)
-    
+
     # Get tht Python stuff inside the crdppf_core folder (it's the crdppf folder which contains __init__.py)
     # this includes all routes and views needed by the crdppf application
     config.include('crdppf')
-
-    global db_config
-    db_config = yaml.load(file(settings.get('db.cfg')))['db_config']
-    settings.update(yaml.load(file(settings.get('app.cfg')))) 
 
     config.set_request_property(read_tile_date, name='tile_date', reify=True)
 
     config.scan()
 
     return config.make_wsgi_app()
-
