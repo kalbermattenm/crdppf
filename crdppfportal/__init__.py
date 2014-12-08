@@ -23,7 +23,7 @@ def read_tile_date(request):
     if os.path.exists(tile_date_file):
         tile_date = yaml.load(file(tile_date_file))
         return tile_date['plan_cadastral'], tile_date['plan_ville']
-    return 'c2c', 'c2c'
+    return '', ''
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.

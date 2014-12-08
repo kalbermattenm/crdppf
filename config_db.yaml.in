@@ -36,5 +36,4 @@ db_config:
 #      att_local_name: nomloc
   restrictions:
       forestlimits
-#      forestdistances
       #highways_project_zones
