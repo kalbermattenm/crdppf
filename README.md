@@ -74,6 +74,10 @@ crdppf/crdppf_core/crdppf/templates/derived/globals.js
        
     $ 'plan_cadastral_name': 'plan_cadastral_crdppf${request.tile_date[0]}'
 
+crdppf/crdppf_core/crdppf/static/js/Crdppf/
+
+Rename admintoolbar.js to adminToolbar.js
+
 # Upgrade and update crdppf_core
 
 To upgrade crdppf_core version of the project go into the crdppf_core folder of your project
