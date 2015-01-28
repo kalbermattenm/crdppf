@@ -1592,7 +1592,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 15500
+    MAXSCALEDENOM 20500
 END
 
 LAYER
@@ -1673,7 +1673,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 15500
+    MAXSCALEDENOM 20500
 END
 
 LAYER
@@ -1713,7 +1713,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 15500
+    MAXSCALEDENOM 20500
 END
 
 #########################################
@@ -1843,7 +1843,7 @@ LAYER
     DATA "geom from cadastre.cad_pos_immeuble using unique objectid using srid=21781"
     LABELITEM 'numero'
     LABELMINSCALE 3650
-    LABELMAXSCALE 10500
+    LABELMAXSCALE 20500
     CLASS
         LABEL
             TYPE TRUETYPE
@@ -1856,7 +1856,7 @@ LAYER
         END        
     END
     MINSCALEDENOM 3650
-    MAXSCALEDENOM 15500
+    MAXSCALEDENOM 20500
 END
 
 #########################################
