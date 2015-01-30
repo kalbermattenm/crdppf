@@ -658,7 +658,7 @@ LAYER
     DATA "geom from crdppf.r73_zones_superposees using unique idobj using srid=21781"
     STATUS ON
     CLASSITEM "teneur" 
-    OPACITY 90
+    OPACITY 60
     TEMPLATE "ttt"
     CLASS
         NAME "Secteur de danger élevé"
