@@ -28,6 +28,7 @@ maybe a
 
 Bootstrap and buildout
 
+    $ cd ..
     $ python bootstrap.py --version 1.5.2 --distribute --download-base \
         http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/ --setup-source \
         http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/distribute_setup.py
@@ -96,7 +97,7 @@ or create a new branch of your choice if you don't want to overwrite the master:
     
 Update and upgrade:
 
-    $ crdppf_core
+    $ cd crdppf_core
     $ git fetch
     $ git checkout <tag>
     $ git submodule sync
