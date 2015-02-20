@@ -27,6 +27,7 @@ fulltextsearch_url = ${vars:fulltextsearch_url}
 mapproxyurl = ${vars:mapproxyurl}
 mapMatrixSet = ${vars:mapMatrixSet}
 mapExtent = ${vars:mapExtent}
+tilesImageFormat = ${vars:tilesImageFormat}
 mapMaxExtent = ${vars:mapMaxExtent}
 mapCenter = ${vars:mapCenter}
 mapSRS = ${vars:mapSRS}
