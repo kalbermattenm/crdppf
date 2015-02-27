@@ -71,9 +71,12 @@ This variable can't the same as another instance existance
 # Change in crdppf_core (not in variable)
 Changement a effectuer dans crdppf_core en attendant que cela passe en variable dans le projet NE
          
-crdppf/crdppf_core/crdppf/templates/derived/globals.js 
+crdppf/crdppf_core/crdppf/models.py 
+Lignes 68 et 73, il faut mettre docid en String au lieu de Integer
+https://github.com/sitn/crdppf_core/blob/master/crdppf/models.py#L68
        
-    $ 'plan_cadastral_name': 'plan_cadastral_crdppf${request.tile_date[0]}'
+    $ docid = Column(String, ForeignKey('crdppf.documents.docid'))
+    $ docid = Column(String, primary_key=True)
 
 crdppf/crdppf_core/crdppf/static/js/Crdppf/
 
