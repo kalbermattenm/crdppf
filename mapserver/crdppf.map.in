@@ -112,7 +112,7 @@ LAYER
         "init=epsg:21781"   ##required
     END
     MINSCALEDENOM 0
-    MAXSCALEDENOM 10001
+    MAXSCALEDENOM 55500
 END
 
 ######################
@@ -1678,7 +1678,10 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 20500
+    MAXSCALEDENOM 55500
+    #en cas de changement d'échelle, il faut également
+    #changer l'échelle dans NAME "parcelles", afin d'avoir le pourtour en rouge qui s'affiche
+    #RW, 18.03.2015
 END
 
 LAYER
@@ -1718,7 +1721,7 @@ LAYER
         END
     END
     MINSCALEDENOM 50
-    MAXSCALEDENOM 20500
+    MAXSCALEDENOM 55500
 END
 
 #########################################

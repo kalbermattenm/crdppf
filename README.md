@@ -70,17 +70,7 @@ This variable can't the same as another instance existance
 
 # Change in crdppf_core (not in variable)
 Changement a effectuer dans crdppf_core en attendant que cela passe en variable dans le projet NE
-         
-crdppf/crdppf_core/crdppf/models.py 
-Lignes 68 et 73, il faut mettre docid en String au lieu de Integer
-https://github.com/sitn/crdppf_core/blob/master/crdppf/models.py#L68
-       
-    $ docid = Column(String, ForeignKey('crdppf.documents.docid'))
-    $ docid = Column(String, primary_key=True)
-
-crdppf/crdppf_core/crdppf/static/js/Crdppf/
-
-Rename admintoolbar.js to adminToolbar.js
+Plus de modifications depuis la version 1.1.0         
 
 # Upgrade and update crdppf_core
 
