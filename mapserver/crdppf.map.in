@@ -134,7 +134,7 @@ LAYER
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_contenus_ponctuels using unique idobj using srid=21781"
     STATUS ON
-    CLASSITEM "teneur" 
+    CLASSITEM "trie" 
     OPACITY 60
     TEMPLATE "ttt"
     CLASS
@@ -259,6 +259,15 @@ LAYER
             COLOR 255 255 255
         END
     END    
+    CLASS
+        NAME "Elément hors légende-type"
+        EXPRESSION "Elément hors légende-type"
+        STYLE
+            SYMBOL "cercle_plein"
+            SIZE 12
+            COLOR 140 0 255
+        END
+    END  
     TOLERANCE 8
     TOLERANCEUNITS pixels
     MAXSCALEDENOM 25000
@@ -279,7 +288,7 @@ LAYER
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_contenus_lineaires using unique idobj using srid=21781"
     STATUS ON
-    CLASSITEM "teneur" 
+    CLASSITEM "trie" 
     OPACITY 60
     TEMPLATE "ttt"
     CLASS
@@ -330,6 +339,14 @@ LAYER
             GAP 10
         END
     END
+    CLASS
+        NAME "Elément hors légende-type"
+        EXPRESSION "Elément hors légende-type"
+        STYLE
+            OUTLINECOLOR 140 0 255
+            WIDTH 2
+        END
+    END
     MAXSCALEDENOM 25000
 END
 
@@ -349,7 +366,7 @@ LAYER
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
     STATUS ON
-    CLASSITEM "teneur" 
+    CLASSITEM "trie" 
     OPACITY 90
     TEMPLATE "ttt"
     LABELITEM 'abreviation'          
@@ -574,7 +591,21 @@ LAYER
             OUTLINECOLOR 0 214 255
             WIDTH 1
         END
-
+    END
+    CLASS
+        NAME "Elément hors légende-type"
+        EXPRESSION "Elément hors légende-type"
+        STYLE
+            COLOR 140 0 255
+            SYMBOL "hatchsymbol"
+            SIZE 8
+            WIDTH 2
+            ANGLE -45
+        END
+        STYLE
+            OUTLINECOLOR 140 0 255
+            WIDTH 1
+        END
     END
 END
 
