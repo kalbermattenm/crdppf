@@ -74,6 +74,7 @@ Plus de modifications depuis la version 1.1.0
 
 crdppf/crdppf_core/crdppf/util/pdf_classes.py
 Changer la ligne 512
+
     $ <sld:CssParameter name="font-family">arial</sld:CssParameter>
 
 # Upgrade and update crdppf_core
