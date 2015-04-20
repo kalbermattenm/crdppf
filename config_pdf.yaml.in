@@ -17,8 +17,8 @@ app_config:
 
   #  configuration and list of the wms layers used for the background image in the pdf
   crdppf_wms_layers:
-    - plan_cadastral
     - parcelles
+    - plan_cadastral
 ##    - la3_limites_communales
   wms_srs: EPSG:21781
   wms_version: 1.1.1
