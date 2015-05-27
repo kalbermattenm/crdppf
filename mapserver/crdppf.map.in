@@ -1021,51 +1021,159 @@ LAYER
 END
 
 LAYER
-  NAME "r103_bazl_projektierungszonen_flughafenanlagen"
-  STATUS ON
-  METADATA
-       "ows_title"                      "r103_bazl_projektierungszonen_flughafenanlagen"
-       "wms_srs"                    "epsg:21781"
-       "wms_title"                      "${vars:instanceid} WMS Server"
-       "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
-       "wms_srs"                    "EPSG:21781" 
-  END
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-  PROCESSING "CLOSE_CONNECTION=DEFER"
-  DATA "geom from crdppf.r103_bazl_projektierungszonen_flughafenanlagen using unique idobj using srid=21781"
-  TYPE POLYGON
-  TEMPLATE "ttt"
-  OPACITY 60
-  CLASS
-    NAME "Zones rés. des install. aéroportuaires"
-    COLOR 255 230 180
-    OUTLINECOLOR 255 170 0
-   END
+    NAME "r87_astra_projektierungszonen_nationalstrassen"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r87_astra_projektierungszonen_nationalstrassen"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r87_astra_projektierungszonen_nationalstrassen using unique idobj using srid=21781"
+    TYPE POLYGON
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Zones réservées des routes nationales"
+        STYLE
+            COLOR 0 220 220
+            OUTLINECOLOR 0 180 180
+        END
+    END
 END
 
 LAYER
-  NAME "r108_bazl_sicherheitszonenplan"
-  STATUS ON
-  METADATA
-       "ows_title"                      "r108_bazl_sicherheitszonenplan"
-       "wms_srs"                    "epsg:21781"
-       "wms_title"                      "${vars:instanceid} WMS Server"
-       "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
-       "wms_srs"                    "EPSG:21781" 
-  END
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
-  PROCESSING "CLOSE_CONNECTION=DEFER"
-  DATA "geom from crdppf.r108_bazl_sicherheitszonenplan using unique idobj using srid=21781"
-  TYPE POLYGON
-  TEMPLATE "ttt"
-  OPACITY 60
-  CLASS
-    NAME "Zone de sécurité aéroportuaire"
-    COLOR 200 70 255
-    OUTLINECOLOR 192 0 192
-   END
+    NAME "r96_bav_projektierungszonen_eisenbahnanlagen"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r96_bav_projektierungszonen_eisenbahnanlage"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r96_bav_projektierungszonen_eisenbahnanlagen using unique idobj using srid=21781"
+    TYPE POLYGON
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Zones réservées des inst. ferrovière"
+        STYLE
+            COLOR 220 220 0
+            OUTLINECOLOR 180 180 0
+        END
+    END
+END
+
+LAYER
+    NAME "r97_bav_baulinien_eisenbahnanlagen"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r97_bav_baulinien_eisenbahnanlage"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r97_bav_baulinien_eisenbahnanlagen using unique idobj using srid=21781"
+    TYPE LINE
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Aligenements des install. ferrovières"
+        STYLE
+            COLOR 220 220 0
+            WIDTH 2
+        END 
+    END
+END
+
+LAYER
+    NAME "r103_bazl_projektierungszonen_flughafenanlagen"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r103_bazl_projektierungszonen_flughafenanlagen"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r103_bazl_projektierungszonen_flughafenanlagen using unique idobj using srid=21781"
+    TYPE POLYGON
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Zones rés. des install. aéroportuaires"
+        STYLE
+            COLOR 255 230 180
+            OUTLINECOLOR 255 170 0
+        END
+    END
+END
+
+LAYER
+    NAME "r104_bazl_baulinien_flughafenanlagen"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r104_bazl_baulinien_flughafenanlagen"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r104_bazl_baulinien_flughafenanlagen using unique idobj using srid=21781"
+    TYPE LINE
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Aligenements des install. aéroportuaire"
+        STYLE
+            COLOR 0 0 180
+            WIDTH 2
+        END
+    END
+END
+
+LAYER
+    NAME "r108_bazl_sicherheitszonenplan"
+    STATUS ON
+    METADATA
+        "ows_title"                      "r108_bazl_sicherheitszonenplan"
+        "wms_srs"                    "epsg:21781"
+        "wms_title"                      "${vars:instanceid} WMS Server"
+        "wms_onlineresource"     "http://${vars:host}/${vars:instanceid}/wmscrdppf"
+        "wms_srs"                    "EPSG:21781" 
+    END
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    DATA "geom from crdppf.r108_bazl_sicherheitszonenplan using unique idobj using srid=21781"
+    TYPE POLYGON
+    TEMPLATE "ttt"
+    OPACITY 60
+    CLASS
+        NAME "Zone de sécurité aéroportuaire"
+        STYLE
+            COLOR 200 70 255
+            OUTLINECOLOR 192 0 192
+        END
+    END
 END
 
 LAYER
