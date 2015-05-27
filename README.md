@@ -74,6 +74,7 @@ Plus de modifications depuis la version 1.1.0
 
 crdppf/crdppf_core/crdppf/templates/base/index.mako
 Ajouter
+  
     $ <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 # Upgrade and update crdppf_core
