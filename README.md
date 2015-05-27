@@ -72,6 +72,10 @@ This variable can't the same as another instance existance
 Changement a effectuer dans crdppf_core en attendant que cela passe en variable dans le projet NE
 Plus de modifications depuis la version 1.1.0         
 
+crdppf/crdppf_core/crdppf/templates/base/index.mako
+Ajouter
+    $ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 # Upgrade and update crdppf_core
 
 To upgrade crdppf_core version of the project go into the crdppf_core folder of your project
