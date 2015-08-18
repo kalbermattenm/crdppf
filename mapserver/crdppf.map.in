@@ -1216,6 +1216,13 @@ LAYER
             COLOR 255 0 0
         END
     END
+    CLASS
+        NAME "Butte pare-balles"
+        EXPRESSION /Butte pare-balles/
+        STYLE
+            COLOR 219 164 177
+        END
+    END
 END
 
 LAYER
