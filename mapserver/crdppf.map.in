@@ -8,8 +8,8 @@ MAXSIZE 4096
 SYMBOLSET "crdppf.sym"
 FONTSET fonts.txt
 
-#CONFIG "MS_ERRORFILE" "/tmp/ms.log"
-DEBUG 3
+CONFIG "MS_ERRORFILE" "/tmp/ms.log"
+DEBUG 5
 EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
 
 WEB
@@ -111,8 +111,8 @@ LAYER
     PROJECTION
         "init=epsg:21781"   ##required
     END
-    MINSCALEDENOM 0
-    MAXSCALEDENOM 55500
+#    MINSCALEDENOM 0
+#    MAXSCALEDENOM 55500
 END
 
 ######################
@@ -1749,7 +1749,8 @@ END
 LAYER
     NAME "cadastre_numero_batiment"
     GROUP "plan_cadastral"
-    TYPE ANNOTATION
+#    TYPE ANNOTATION
+    TYPE POINT
     STATUS ON
     METADATA
         "ows_title" "Numero de batiment"
@@ -1938,7 +1939,8 @@ END
 LAYER
     NAME "cadastre_pos_immeuble_1"
     GROUP "plan_cadastral"
-    TYPE ANNOTATION
+#    TYPE ANNOTATION
+    TYPE POINT
     STATUS ON
     METADATA
         "ows_title" "cadastre_pos_immeuble"
@@ -1977,7 +1979,8 @@ END
 LAYER
     NAME "cadastre_pos_immeuble_2"
     GROUP "plan_cadastral"
-    TYPE ANNOTATION
+#    TYPE ANNOTATION
+    TYPE POINT
     STATUS ON
     METADATA
         "ows_title" "cadastre_pos_immeuble"
@@ -2166,7 +2169,8 @@ END
 LAYER
     NAME "cadastre_nomenclature"
     GROUP "plan_cadastral"
-    TYPE ANNOTATION
+#    TYPE ANNOTATION
+    TYPE POINT
     STATUS ON
     METADATA
         "ows_title" "cadastre_nomenclature"
