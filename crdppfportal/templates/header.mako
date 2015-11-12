@@ -19,7 +19,7 @@
                 <span class="banner1">&nbsp;
                     <a class="banner2" href="http://www.jura.ch/rdppf" target="_blank">Accueil</a> -
                     <a class="banner2" href="http://geoportail.jura.ch/MapFish/CRDPPF_Extrait_certifie.pdf" target="_blank">Commande extrait certifié</a> -
-                    <a class="banner2" href="http://mapfish.jura.ch" target="_blank">GéoPortail</a> -
+                    <a class="banner2" href="http://geo.jura.ch" target="_blank">GéoPortail</a> -
                     <a class="banner2" href="http://geoportail.jura.ch/MapFish/Aide_CRDPPF.pdf" target="_blank">Aide</a> -
                     <a class="banner2" href="mailto:sit@jura.ch?subject=Projet pilote CRDPPF" target="_blank">Contact</a> - 
                     <a class="banner2" href="" id="frLink">Fr</a> /
