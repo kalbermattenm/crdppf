@@ -87,6 +87,7 @@ LAYER
     NAME "parcelles"
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
 #    DATA "geom from immeubles_canton using unique noobj using srid=21781"
@@ -130,6 +131,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_contenus_ponctuels using unique idobj using srid=21781"
@@ -284,6 +286,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_contenus_lineaires using unique idobj using srid=21781"
@@ -362,6 +365,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
@@ -625,6 +629,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_perimetres_superposes using unique idobj using srid=21781"
@@ -684,6 +689,7 @@ LAYER
         "wms_srs"            "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_zones_superposees using unique idobj using srid=21781"
@@ -753,6 +759,7 @@ LAYER
         "wms_srs"            "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r73_affectations_primaires using unique idobj using srid=21781"
@@ -1031,6 +1038,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r87_astra_projektierungszonen_nationalstrassen using unique idobj using srid=21781"
@@ -1057,6 +1065,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r96_bav_projektierungszonen_eisenbahnanlagen using unique idobj using srid=21781"
@@ -1083,6 +1092,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r97_bav_baulinien_eisenbahnanlagen using unique idobj using srid=21781"
@@ -1109,6 +1119,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r103_bazl_projektierungszonen_flughafenanlagen using unique idobj using srid=21781"
@@ -1135,6 +1146,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r104_bazl_baulinien_flughafenanlagen using unique idobj using srid=21781"
@@ -1161,6 +1173,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r108_bazl_sicherheitszonenplan using unique idobj using srid=21781"
@@ -1187,6 +1200,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r116_sites_pollues using unique idobj using srid=21781"
@@ -1237,6 +1251,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     #DATA "geom from crdppf.r118_bazl_belastete_standorte_zivilflugplaetze using unique idobj using srid=21781"
@@ -1270,6 +1285,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r118_bazl_belastete_standorte_zivilflugplaetze using unique idobj using srid=21781"
@@ -1320,6 +1336,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r131_zone_prot_eau using unique idobj using srid=21781"
@@ -1364,6 +1381,7 @@ LAYER
         "wms_srs"                   "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r132_perimetre_prot_eau using unique idobj using srid=21781"
@@ -1399,6 +1417,7 @@ LAYER
         "wms_srs"            "EPSG:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r145_sens_bruit using unique idobj using srid=21781"
@@ -1459,6 +1478,7 @@ LAYER
         "wms_srs"                    "EPSG:21781" 
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from crdppf.r157_lim_foret using unique idobj using srid=21781"
@@ -1485,6 +1505,7 @@ LAYER
     NAME "la3_limites_communales"
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from general.la3_limites_communales using unique numcom using srid=21781"
@@ -1533,6 +1554,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_objets_divers_lignes using unique objectid using srid=21781"
@@ -1611,6 +1633,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_objets_divers_surface using unique objectid using srid=21781"
@@ -1683,6 +1706,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_couverture_du_sol using unique objectid using srid=21781"
@@ -1731,6 +1755,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_couverture_du_sol_batiments using unique objectid using srid=21781"
@@ -1765,6 +1790,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_couverture_du_sol_numero_batiment using unique objectid using srid=21781"
@@ -1809,6 +1835,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     #CONNECTION "user=www-data password=www-data dbname=donnees host=localhost port=5432"
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
@@ -1849,6 +1876,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_ddp using unique objectid using srid=21781"
@@ -1892,6 +1920,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_pos_immeuble_ligne_auxiliaire using unique objectid using srid=21781"
@@ -1923,6 +1952,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_pos_immeuble_proj_ligne_aux using unique objectid using srid=21781"
@@ -1955,6 +1985,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_pos_immeuble using unique objectid using srid=21781"
@@ -1995,6 +2026,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_pos_immeuble using unique objectid using srid=21781"
@@ -2037,6 +2069,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_objets_divers_ponctuel using unique objectid using srid=21781"
@@ -2102,6 +2135,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_points_limites using unique objectid using srid=21781"
@@ -2185,6 +2219,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_nomenclature using unique objectid using srid=21781"
@@ -2227,6 +2262,7 @@ LAYER
         "init=epsg:21781"
     END
     CONNECTIONTYPE POSTGIS
+    EXTENT ${vars:mapExtentMinX} ${vars:mapExtentMinY} ${vars:mapExtentMaxX} ${vars:mapExtentMaxY}
     CONNECTION "user=${vars:dbuser} password=${vars:dbpassword} dbname=${vars:db_donnees} host=${vars:dbhost} port=${vars:dbport}"
     PROCESSING "CLOSE_CONNECTION=DEFER"
     DATA "geom from cadastre.cad_adr_troncon_rue using unique objectid using srid=21781"
