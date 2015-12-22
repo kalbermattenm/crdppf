@@ -3,6 +3,17 @@ CRDPPF Portal
 
 # Getting started
 
+Repértoire privé
+
+.. code:: bash
+
+    cd
+
+Répertoire instance principale
+
+.. code:: bash
+    
+    cd /var/www/vhosts/sitj/private
   
 Checkout the source code with a ssh key (see https://help.github.com/articles/generating-ssh-keys):
 
@@ -29,9 +40,7 @@ maybe a
 Bootstrap and buildout
 
     $ cd ..
-    $ python bootstrap.py --version 1.5.2 --distribute --download-base \
-        http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/ --setup-source \
-        http://pypi.camptocamp.net/distribute-0.6.22_fix-issue-227/distribute_setup.py
+    $ python bootstrap-buildout.py --allow-site-packages
 
 After the installation put the directoriy crdpp in W
 
