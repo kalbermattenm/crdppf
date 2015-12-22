@@ -13,35 +13,35 @@ Répertoire instance principale
   
 Checkout the source code with a ssh key (see https://help.github.com/articles/generating-ssh-keys):
 
-    $ git clone git@github.com:SIT-Jura/crdppf.git
+    git clone git@github.com:SIT-Jura/crdppf.git
 
 or when you're not using ssh key:
 
-    $ git clone https://github.com/SIT-Jura/crdppf.git
+    git clone https://github.com/SIT-Jura/crdppf.git
 
 Get the submodule crdppf_core (https://github.com/sitn/crdppf_core.git if you'd like to get the core project too)
 
-    $ cd crdppf
-    $ git submodule update --init
+    cd crdppf
+    git submodule update --init
     
 Once it is installed get all the libraries of the submodule (ext, openlayers, ...)
 
-    $ cd crdppf_core
-    $ git submodule update --init
+    cd crdppf_core
+    git submodule update --init
      
 maybe a 
 
-    $ git submodule foreach git submodule update --init
+    git submodule foreach git submodule update --init
 
 Bootstrap and buildout
 
-    $ cd ..
-    $ python bootstrap-buildout.py --allow-site-packages
+    cd ..
+    python bootstrap-buildout.py --allow-site-packages
 
 After the installation put the directoriy crdpp in W
 
-    $ cd ..
-    $ chmod -R o+w crdppf
+    cd ..
+    chmod -R o+w crdppf
 
 # Create your own buildout file by:
 * Rename the new file `buildout_<user>.cfg`
@@ -61,15 +61,15 @@ Adapt the `overwrite_me` values to your environment:
 
 Run buildout
 
-    $ ./buildout/bin/buildout -c buildout_<user>.cfg
+    ./buildout/bin/buildout -c buildout_<user>.cfg
 
 or
-    $ ./refresh xxxx
+    ./refresh xxxx
 
 Or, copy-paste and adapt `buildout_rwunderlich.cfg`
 Change 
 
-    $ instanceid = xxxx
+    instanceid = xxxx
     
 This variable can't the same as another instance existance
 
@@ -80,7 +80,7 @@ Plus de modifications depuis la version 1.1.0
 crdppf/crdppf_core/crdppf/templates/base/index.mako
 Ajouter
   
-    $ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 # Upgrade and update crdppf_core
 
@@ -88,23 +88,23 @@ To upgrade crdppf_core version of the project go into the crdppf_core folder of 
 Make sure your on the master branch or the branch you want to be on:
 
 to get the list of your local branches:
-    $ git branch
+    git branch
 
 change on master if needed:   
  
-    $ git checkout master
+    git checkout master
 
 or create a new branch of your choice if you don't want to overwrite the master:
 
-    $ git checkout -b [mynewbranch]
+    git checkout -b [mynewbranch]
     
 Update and upgrade:
 
-    $ cd crdppf_core
-    $ git fetch
-    $ git checkout <tag>
-    $ git submodule sync
-    $ git submodule update --init
+    cd crdppf_core
+    git fetch
+    git checkout <tag>
+    git submodule sync
+    git submodule update --init
 
 <tag> is the version of crdppf_core (ex: 1.0.7) 
      
