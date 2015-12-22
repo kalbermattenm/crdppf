@@ -5,13 +5,9 @@ CRDPPF Portal
 
 Repértoire privé
 
-.. code:: bash
-
     cd
 
 Répertoire instance principale
-
-.. code:: bash
     
     cd /var/www/vhosts/sitj/private
   
