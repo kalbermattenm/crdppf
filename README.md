@@ -36,7 +36,7 @@ maybe a
 Bootstrap and buildout
 
     cd ..
-    python bootstrap-buildout.py --allow-site-packages
+    python bootstrap-buildout.py
 
 After the installation put the directoriy crdpp in W
 
